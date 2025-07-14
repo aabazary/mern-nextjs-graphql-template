@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* Light Theme (default) */
+:root {
+  --color-primary: #3b82f6;
+  --color-secondary: #1d4ed8;
+  --color-accent: #10b981;
+  --color-lightBackground: #f8fafc;
+  --color-darkForeground: #1e293b;
+  
+  /* Background Colors */
+  --color-bg-primary: #ffffff; /* main background */
+  --color-bg-secondary: #f8fafc; /* card backgrounds */
+  --color-bg-tertiary: #f1f5f9; /* hover states */
+  --color-bg-modal: #ffffff; /* modal background */
+  --color-bg-navbar: #f8fafc; /* navbar background */
+  --color-bg-input: #ffffff; /* input background */
+  --color-bg-button: #3b82f6; /* button background */
+  
+  /* Text Colors */
+  --color-text-primary: #1e293b; /* main text */
+  --color-text-secondary: #64748b; /* secondary text */
+  --color-text-muted: #94a3b8; /* muted text */
+  --color-text-modal: #1e293b; /* modal text */
+  --color-text-navbar: #1e293b; /* navbar text */
+  --color-text-input: #1e293b; /* input text */
+  --color-text-button: #ffffff; /* button text */
+  
+  /* Border Colors */
+  --color-border-primary: #e2e8f0; /* main borders */
+  --color-border-secondary: #cbd5e1; /* subtle borders */
+  --color-border-input: #d1d5db; /* input borders */
+  --color-border-modal: #e5e7eb; /* modal borders */
+  
+  /* Status Colors */
+  --color-error: #ef4444; /* error messages */
+  --color-success: #22c55e; /* success messages */
+  --color-warning: #f59e0b; /* warning messages */
+  --color-danger: #dc2626; /* danger buttons */
+  
+  /* Role Colors */
+  --color-role-superadmin: #fee2e2; /* Superadmin background */
+  --color-role-superadmin-text: #991b1b; /* Superadmin text */
+  --color-role-owner: #fef3c7; /* Owner background */
+  --color-role-owner-text: #92400e; /* Owner text */
+  --color-role-registered: #dcfce7; /* Registered background */
+  --color-role-registered-text: #166534; /* Registered text */
+  --color-role-default: #f1f5f9; /* Default role background */
+  --color-role-default-text: #64748b; /* Default role text */
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-primary: #3b82f6;
+  --color-secondary: #1d4ed8;
+  --color-accent: #10b981;
+  --color-lightBackground: #1e293b;
+  --color-darkForeground: #f8fafc;
+  
+  /* Background Colors */
+  --color-bg-primary: #0f172a; /* main background */
+  --color-bg-secondary: #1e293b; /* card backgrounds */
+  --color-bg-tertiary: #334155; /* hover states */
+  --color-bg-modal: #1e293b; /* modal background */
+  --color-bg-navbar: #1e293b; /* navbar background */
+  --color-bg-input: #334155; /* input background */
+  --color-bg-button: #3b82f6; /* button background */
+  
+  /* Text Colors */
+  --color-text-primary: #f1f5f9; /* main text */
+  --color-text-secondary: #cbd5e1; /* secondary text */
+  --color-text-muted: #94a3b8; /* muted text */
+  --color-text-modal: #f1f5f9; /* modal text */
+  --color-text-navbar: #e2e8f0; /* navbar text */
+  --color-text-input: #f1f5f9; /* input text */
+  --color-text-button: #ffffff; /* button text */
+  
+  /* Border Colors */
+  --color-border-primary: #475569; /* main borders */
+  --color-border-secondary: #64748b; /* subtle borders */
+  --color-border-input: #475569; /* input borders */
+  --color-border-modal: #475569; /* modal borders */
+  
+  /* Status Colors */
+  --color-error: #ef4444; /* error messages */
+  --color-success: #22c55e; /* success messages */
+  --color-warning: #f59e0b; /* warning messages */
+  --color-danger: #dc2626; /* danger buttons */
+  
+  /* Role Colors */
+  --color-role-superadmin: #7f1d1d; /* Superadmin background */
+  --color-role-superadmin-text: #fecaca; /* Superadmin text */
+  --color-role-owner: #78350f; /* Owner background */
+  --color-role-owner-text: #fed7aa; /* Owner text */
+  --color-role-registered: #14532d; /* Registered background */
+  --color-role-registered-text: #bbf7d0; /* Registered text */
+  --color-role-default: #334155; /* Default role background */
+  --color-role-default-text: #cbd5e1; /* Default role text */
+}

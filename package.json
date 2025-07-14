@@ -1,0 +1,46 @@
+{
+  "name": "pern-nextjs-graphql-template",
+  "version": "1.0.0",
+  "description": "PERN stack template with Next.js, GraphQL, Prisma, JWT, Bcrypt, and TailwindCSS",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend:wait\"",
+    "dev:frontend": "cd front-end && npm run dev",
+    "dev:frontend:wait": "wait-on tcp:4000 && cd front-end && npm run dev",
+    "dev:backend": "cd back-end && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd front-end && npm run build",
+    "build:backend": "cd back-end && npm run build",
+    "install:all": "npm install && cd front-end && npm install && cd ../back-end && npm install",
+    "clean": "npm run clean:frontend && npm run clean:backend",
+    "clean:frontend": "cd front-end && rm -rf .next node_modules",
+    "clean:backend": "cd back-end && rm -rf dist node_modules",
+    "db:generate": "cd back-end && npm run db:generate",
+    "db:migrate": "cd back-end && npm run db:migrate",
+    "db:seed": "cd back-end && npm run db:seed",
+    "db:reset": "cd back-end && npm run db:reset",
+    "db:studio": "cd back-end && npm run db:studio"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "wait-on": "^8.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "pern",
+    "nextjs",
+    "graphql",
+    "prisma",
+    "postgresql",
+    "typescript",
+    "tailwindcss"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}

@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# TypeScript
+*.tsbuildinfo
+dist/ # Compiled output
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Prisma
+*.db
+prisma/dev.db # if you use sqlite for local development
+*.sqlite
+*.sqlite-journal
+
+# VS Code
+.vscode/
+.vscode/*.code-workspace
+
+# macOS
+.DS_Store
+
+# Other common OS files
+Thumbs.db
