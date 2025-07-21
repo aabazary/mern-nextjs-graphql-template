@@ -94,8 +94,3 @@ Thumbs.db
 
 # Database
 *.db
-*.sqlite
-*.sqlite3
-
-# Prisma
-prisma/migrations/ 

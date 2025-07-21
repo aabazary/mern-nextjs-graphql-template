@@ -22,11 +22,6 @@ dist/ # Compiled output
 .env.production.local
 .env.local
 
-# Prisma
-*.db
-prisma/dev.db # if you use sqlite for local development
-*.sqlite
-*.sqlite-journal
 
 # VS Code
 .vscode/

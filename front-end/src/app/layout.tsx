@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Template App", 
-  description: "PERN stack template with Next.js, GraphQL, Prisma, JWT, Bcrypt, and TailwindCSS", 
+  description: "MERN stack template with Next.js, GraphQL, MongoDB, JWT, Bcrypt, and TailwindCSS", 
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 {
   "name": "pern-nextjs-graphql-template",
   "version": "1.0.0",
-  "description": "PERN stack template with Next.js, GraphQL, Prisma, JWT, Bcrypt, and TailwindCSS",
+  "description": "PERN stack template with Next.js, GraphQL, MongoDB, JWT, Bcrypt, and TailwindCSS",
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend:wait\"",
@@ -33,8 +33,8 @@
     "pern",
     "nextjs",
     "graphql",
-    "prisma",
-    "postgresql",
+    "mongoose",
+    "mongodb",
     "typescript",
     "tailwindcss"
   ],
