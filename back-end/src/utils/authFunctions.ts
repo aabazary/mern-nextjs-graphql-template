@@ -18,7 +18,6 @@ export const comparePassword = async (
 };
 
 export const hashToken = async (token: string): Promise<string> => {
-  // Use SHA-256 for deterministic hashing of tokens
   return crypto.createHash('sha256').update(token).digest('hex');
 };
 
@@ -26,7 +25,6 @@ export const compareToken = async (
   token: string,
   hash: string
 ): Promise<boolean> => {
-  // For SHA-256, we just compare the hashes directly
   const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
   return tokenHash === hash;
 };

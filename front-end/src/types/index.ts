@@ -61,7 +61,7 @@ export enum AuthFormType {
 }
 
 // GraphQL Types
-export interface GraphQLResponse<T = any> {
+export interface GraphQLResponse<T = unknown> {
   data?: T;
   errors?: Array<{
     message: string;

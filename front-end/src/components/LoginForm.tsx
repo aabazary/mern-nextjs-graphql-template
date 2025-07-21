@@ -30,8 +30,12 @@ export default function LoginForm({ onClose, onToggleToSignup }: LoginFormProps)
         login(data.login.token, data.login.user);
         onClose();
       }
-    } catch (err: any) {
-      setError(err.message || 'Login failed. Please try again.');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Login failed. Please try again.');
+      } else {
+        setError('Login failed. Please try again.');
+      }
     } finally {
       setIsLoading(false);
     }

@@ -69,7 +69,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         
         if (result.data?.me) {
           setUser(result.data.me);
-        } else if (result.errors && result.errors.some((err: any) => err.extensions?.code === 'UNAUTHENTICATED')) {
+        } else if (result.errors && result.errors.some((err: { extensions?: { code?: string } }) => err.extensions?.code === 'UNAUTHENTICATED')) {
           const success = await refreshToken();
           if (success) {
             // Retry query after token refresh

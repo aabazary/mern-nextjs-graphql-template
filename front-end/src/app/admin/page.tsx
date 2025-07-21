@@ -88,7 +88,7 @@ export default function AdminPage() {
                     </tr>
                   </thead>
                   <tbody className="bg-[var(--color-bg-secondary)] divide-y divide-[var(--color-border-primary)]">
-                    {users.map((user: any) => (
+                    {users.map((user: import("@/types").User) => (
                       <tr key={user.id} className="hover:bg-[var(--color-bg-tertiary)] transition-colors duration-200">
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-[var(--color-text-primary)]">
                           {user.email}

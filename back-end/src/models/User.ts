@@ -19,7 +19,6 @@ const UserSchema = new Schema<IUser>({
   refreshTokens: [{ type: Schema.Types.ObjectId, ref: 'RefreshToken' }],
 });
 
-// Virtual for id to map _id to id for GraphQL
 UserSchema.virtual('id').get(function(this: IUser) {
   return (this._id as Types.ObjectId).toHexString();
 });

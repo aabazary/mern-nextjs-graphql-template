@@ -9,12 +9,12 @@ const httpLink = createHttpLink({
 
 // Error link for token refresh
 const createErrorLink = () => {
-  return onError(({ graphQLErrors, networkError, operation, forward }) => {
+  return onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors) {
-      for (let err of graphQLErrors) {
-        console.log('GraphQL Error:', err.message, err.extensions);
+      for (const _err of graphQLErrors) {
+        console.log('GraphQL Error:', _err.message, _err.extensions);
         // Handle expired token
-        if (err.extensions?.code === 'UNAUTHENTICATED' && err.message.includes('logged in')) {
+        if (_err.extensions?.code === 'UNAUTHENTICATED' && _err.message.includes('logged in')) {
           console.log('Attempting to refresh token...');
           return new Observable(observer => {
             fetch('http://localhost:4000/api/refresh-token', {
@@ -28,7 +28,7 @@ const createErrorLink = () => {
               }
               throw new Error('Token refresh failed');
             })
-            .then(data => {
+            .then(() => {
               console.log('Token refresh successful, new token received');
               // Reload page to update auth context
               if (typeof window !== 'undefined') {

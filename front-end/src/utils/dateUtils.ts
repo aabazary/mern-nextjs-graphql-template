@@ -38,7 +38,7 @@ export const formatDate = (dateString: string | Date | null | undefined): string
       month: 'long',
       day: 'numeric',
     });
-  } catch (error) {
+  } catch {
     return 'Invalid Date';
   }
 };
@@ -60,7 +60,7 @@ export const formatDateTime = (dateString: string | Date | null | undefined): st
       hour: '2-digit',
       minute: '2-digit',
     });
-  } catch (error) {
+  } catch {
     return 'Invalid Date';
   }
 }; 

@@ -39,8 +39,12 @@ export default function DashboardPage() {
       
       setIsEditing(false);
       refetch();
-    } catch (err: any) {
-      setError(err.message || 'Failed to update user');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Failed to update user');
+      } else {
+        setError('Failed to update user');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -63,8 +67,12 @@ export default function DashboardPage() {
       
       logout();
       router.push('/');
-    } catch (err: any) {
-      setError(err.message || 'Failed to delete user');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Failed to delete user');
+      } else {
+        setError('Failed to delete user');
+      }
     } finally {
       setIsLoading(false);
     }

@@ -25,8 +25,12 @@ export default function ForgotPasswordPage() {
       });
       
       setSuccess(true);
-    } catch (err: any) {
-      setError(err.message || 'Failed to request password reset');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Failed to request password reset');
+      } else {
+        setError('Failed to request password reset');
+      }
     } finally {
       setIsLoading(false);
     }

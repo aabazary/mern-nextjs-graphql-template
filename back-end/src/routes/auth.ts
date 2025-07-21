@@ -30,7 +30,7 @@ authRouter.post("/refresh-token", (async (req: Request, res: Response) => {
 
     const refreshTokenRecord = await RefreshToken.findOne({
       tokenHash: hashedOldRefreshToken,
-    }).populate('user');
+    }).populate("user");
 
     // Check if the record exists and belongs to the correct user
     if (!refreshTokenRecord || refreshTokenRecord.user.toString() !== userId) {
@@ -98,7 +98,7 @@ authRouter.post("/refresh-token", (async (req: Request, res: Response) => {
       console.error("Error details:", {
         name: error.name,
         message: error.message,
-        stack: error.stack
+        stack: error.stack,
       });
     } else {
       console.error("Unknown error type:", error);
@@ -166,9 +166,6 @@ authRouter.post("/reset-password", (async (req: Request, res: Response) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      // Log for monitoring, but return generic error for security
-      // Will potentially remove in production
-      console.warn(`Password reset attempt for non-existent email: ${email}`);
       res
         .status(400)
         .json({ message: "Invalid or expired token. Please try again." });

@@ -41,8 +41,12 @@ export default function SignupForm({ onClose, onToggleToLogin }: SignupFormProps
         login(data.signup.token, data.signup.user);
         onClose();
       }
-    } catch (err: any) {
-      setError(err.message || 'Signup failed. Please try again.');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Signup failed. Please try again.');
+      } else {
+        setError('Signup failed. Please try again.');
+      }
     } finally {
       setIsLoading(false);
     }
